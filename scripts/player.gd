@@ -13,18 +13,23 @@ const GRAVITY = 200
 
 var REMAINING_BOOSTS = 1
 var CURRENT_JUMPS = 1
+
+@onready var anim = get_node("AnimatedSprite2D")
+func _ready():
+	anim.play("Idle")
+	
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _physics_process(delta):
 	var input_dir: Vector2 = input()
 	if input_dir != Vector2.ZERO && !beyond_top_speed():
 		print(velocity.x)
 		add_acceleration(input_dir)
-		# play run animation here -> write the script
+		anim.play("Run") # play run animation here -> write the script
 		# play_animation()
 		boost(input_dir)
 	else:
 		add_friction()
-		# play_animation()
+		anim.play("Idle") # play_animation()
 	jump()
 	player_movement()
 	
