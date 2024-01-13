@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpt0dfqnlam8k"]
+[gd_scene load_steps=12 format=3 uid="uid://dpt0dfqnlam8k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n163l"]
 [ext_resource type="Texture2D" uid="uid://is5aeq1j2ahu" path="res://Winky Sprites/Winky Idle 2 Left.png" id="2_11kuw"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://du1oy5pycbh5w" path="res://Winky Sprites/Winky Idle 4 Left.png" id="4_brdyp"]
 [ext_resource type="Texture2D" uid="uid://bb24r72gnb4gg" path="res://Winky Sprites/Winky Dash 1 Right.png" id="5_jcisu"]
 [ext_resource type="Texture2D" uid="uid://cm6xe8l5qvlfq" path="res://Winky Sprites/Winky Dash 2 Right.png" id="6_xk32t"]
+[ext_resource type="Script" path="res://scenes/eyeball.gd" id="7_2v5va"]
+[ext_resource type="Texture2D" uid="uid://dhd6fu5jllmr5" path="res://WinkyEye_sample.png" id="8_508gq"]
+[ext_resource type="PackedScene" uid="uid://bbopy7xht7lsn" path="res://scenes/wink_bullet.tscn" id="8_gm80r"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2wbjp"]
 animations = [{
@@ -41,7 +44,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yohx"]
-radius = 67.0
+radius = 40.0
 height = 166.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -49,13 +52,13 @@ position = Vector2(76, 44)
 script = ExtResource("1_n163l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-27, 100)
-scale = Vector2(0.257407, 0.257407)
+position = Vector2(0, -0.999903)
+scale = Vector2(0.257407, 0.255555)
 sprite_frames = SubResource("SpriteFrames_2wbjp")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-11, 144)
+position = Vector2(8, 45)
 shape = SubResource("CapsuleShape2D_2yohx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -63,3 +66,14 @@ shape = SubResource("CapsuleShape2D_2yohx")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="eyeball" type="CharacterBody2D" parent="."]
+position = Vector2(6, 7)
+script = ExtResource("7_2v5va")
+Bullet = ExtResource("8_gm80r")
+
+[node name="pupil" type="Sprite2D" parent="eyeball"]
+position = Vector2(2.2981, 1.00453e-07)
+rotation = 1.5708
+scale = Vector2(0.25, 0.240779)
+texture = ExtResource("8_508gq")

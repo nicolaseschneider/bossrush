@@ -22,7 +22,6 @@ func _ready():
 func _physics_process(delta):
 	var input_dir: Vector2 = input()
 	if input_dir != Vector2.ZERO && !beyond_top_speed():
-		print(velocity.x)
 		add_acceleration(input_dir)
 		anim.play("Run") # play run animation here -> write the script
 		# play_animation()
@@ -48,9 +47,8 @@ func add_friction():
 
 func boost(direction: Vector2):
 	if Input.is_action_just_pressed("boost"):
-		print("boost time!")
 		velocity = velocity.move_toward(BOOST_SPEED * direction, BOOST_ACCEL)
-		print(velocity.x)
+
 	
 func jump():
 	if Input.is_action_just_pressed("jump"):
