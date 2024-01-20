@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://jx4feb1x06wg"]
+
+[ext_resource type="FontFile" uid="uid://bdow2rvywn0wl" path="res://Winkygamefont_v01-Regular.otf" id="1_g5o7x"]
+
+[resource]
+base_font = ExtResource("1_g5o7x")
