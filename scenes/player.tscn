@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dpt0dfqnlam8k"]
+[gd_scene load_steps=31 format=3 uid="uid://dpt0dfqnlam8k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n163l"]
 [ext_resource type="Script" path="res://scenes/eyeball.gd" id="7_2v5va"]
@@ -33,6 +33,23 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_2eu8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_uaory")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7w4cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xl2lq")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("14_147fg")
 }, {
 "duration": 1.0,
@@ -46,6 +63,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_jdi4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ku6a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1dloy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r5o6v")
+}],
+"loop": true,
+"name": &"Jump",
 "speed": 5.0
 }, {
 "frames": [{
@@ -71,92 +105,6 @@ animations = [{
 "name": &"Run",
 "speed": 5.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_1",
-"speed": 5.0
-}]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yohx"]
-radius = 40.0
-height = 166.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ghlyf"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_2eu8r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_uaory")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_7w4cs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_xl2lq")
-}],
-"loop": true,
-"name": &"HIT",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_147fg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_a3sum")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_50av4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_w5hra")
-}],
-"loop": true,
-"name": &"IDLE",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("18_jdi4v")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_ku6a4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_1dloy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_r5o6v")
-}],
-"loop": true,
-"name": &"JUMP",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("22_yhiap")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_il54d")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_7m7dy")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_qed83")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_54o72")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_2617i")
-}],
-"loop": true,
-"name": &"RUN",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("28_rnpqj")
@@ -177,9 +125,13 @@ animations = [{
 "texture": ExtResource("33_2hagd")
 }],
 "loop": true,
-"name": &"SLIDE",
+"name": &"Slide",
 "speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yohx"]
+radius = 40.0
+height = 166.0
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(76, 44)
@@ -211,14 +163,3 @@ position = Vector2(2.2981, 1.00453e-07)
 rotation = 1.5708
 scale = Vector2(0.25, 0.240779)
 texture = ExtResource("8_508gq")
-
-[node name="Legs" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(6, 7)
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Legs"]
-position = Vector2(-20, 77)
-scale = Vector2(0.239751, 0.239751)
-sprite_frames = SubResource("SpriteFrames_ghlyf")
-animation = &"SLIDE"
-frame_progress = 0.484548

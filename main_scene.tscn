@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://duqggi47ugmqh"]
+[gd_scene load_steps=5 format=3 uid="uid://duqggi47ugmqh"]
 
 [ext_resource type="Script" path="res://scenes/main/MainScene.gd" id="1_5ddjx"]
 [ext_resource type="PackedScene" uid="uid://dpt0dfqnlam8k" path="res://scenes/player.tscn" id="2_8c30s"]
+[ext_resource type="Texture2D" uid="uid://s7q3n83fhvo5" path="res://Sketch.png" id="2_td2e3"]
 [ext_resource type="PackedScene" uid="uid://dckridangs3gj" path="res://scenes/platform.tscn" id="3_q3ya2"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_5ddjx")
+
+[node name="Sketch" type="Sprite2D" parent="."]
+position = Vector2(721, 289)
+texture = ExtResource("2_td2e3")
 
 [node name="Player" parent="." instance=ExtResource("2_8c30s")]
 position = Vector2(583, 430)
@@ -23,3 +28,8 @@ rotation = 1.5708
 [node name="Platform4" parent="." instance=ExtResource("3_q3ya2")]
 position = Vector2(4, 311)
 rotation = 1.5708
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Background" type="Node2D" parent="Node"]
+position = Vector2(-657, -16)

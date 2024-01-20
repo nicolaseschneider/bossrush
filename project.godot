@@ -11,13 +11,12 @@ config_version=5
 [application]
 
 config/name="BossRushGameJam"
-run/main_scene="res://main_scene.tscn"
+run/main_scene="res://start_screen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-mouse_cursor/custom_image="res://Place holder cusotm cursor 1.png"
 mouse_cursor/custom_image_hotspot=Vector2(32, 32)
 
 [gui]
