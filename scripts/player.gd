@@ -53,9 +53,8 @@ func add_friction():
 
 func boost(direction: Vector2):
 	if Input.is_action_just_pressed("boost"):
-		print("boost time!")
 		velocity = velocity.move_toward(BOOST_SPEED * direction, BOOST_ACCEL)
-		print(velocity.x)
+
 	
 func jump():
 	if Input.is_action_just_pressed("jump"):

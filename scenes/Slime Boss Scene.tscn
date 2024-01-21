@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://inxrt7710rk1"]
+
+[ext_resource type="Texture2D" uid="uid://bkjfu2p45va86" path="res://Backgrounds/Slime Boss Room.png" id="1_dptc7"]
+[ext_resource type="Script" path="res://scenes/Slime Boss Scene.gd" id="1_gsmoc"]
+[ext_resource type="PackedScene" uid="uid://dpt0dfqnlam8k" path="res://scenes/player.tscn" id="2_14xy0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7iu82"]
+size = Vector2(1.55639, 6.8818)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bnc8"]
+size = Vector2(0.172932, 46.8628)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgr8a"]
+size = Vector2(168, 949.5)
+
+[node name="Slime Boss Scene" type="Node2D"]
+script = ExtResource("1_gsmoc")
+
+[node name="SlimeBossRoom" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(646, 199)
+scale = Vector2(2.56509, 2.56509)
+texture = ExtResource("1_dptc7")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_14xy0")]
+position = Vector2(192, 454)
+
+[node name="Platform" type="StaticBody2D" parent="."]
+show_behind_parent = true
+scale = Vector2(890.524, 22.5232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+position = Vector2(0.725415, 30.0801)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_7iu82")
+
+[node name="Platform West" type="StaticBody2D" parent="."]
+show_behind_parent = true
+position = Vector2(-5, -32)
+scale = Vector2(890.524, 22.5232)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform West"]
+show_behind_parent = true
+position = Vector2(-0.050532, 10.7001)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8bnc8")
+
+[node name="Platform East" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform East"]
+show_behind_parent = true
+position = Vector2(1325, 198)
+shape = SubResource("RectangleShape2D_kgr8a")

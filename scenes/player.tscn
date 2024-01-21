@@ -1,23 +1,65 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpt0dfqnlam8k"]
+[gd_scene load_steps=31 format=3 uid="uid://dpt0dfqnlam8k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n163l"]
-[ext_resource type="Texture2D" uid="uid://is5aeq1j2ahu" path="res://Winky Sprites/Winky Idle 2 Left.png" id="2_11kuw"]
-[ext_resource type="Texture2D" uid="uid://drfb3ngmjgxca" path="res://Winky Sprites/Winky Idle 3 Left.png" id="3_yl35b"]
-[ext_resource type="Texture2D" uid="uid://du1oy5pycbh5w" path="res://Winky Sprites/Winky Idle 4 Left.png" id="4_brdyp"]
-[ext_resource type="Texture2D" uid="uid://bb24r72gnb4gg" path="res://Winky Sprites/Winky Dash 1 Right.png" id="5_jcisu"]
-[ext_resource type="Texture2D" uid="uid://cm6xe8l5qvlfq" path="res://Winky Sprites/Winky Dash 2 Right.png" id="6_xk32t"]
+[ext_resource type="Script" path="res://scenes/eyeball.gd" id="7_2v5va"]
+[ext_resource type="Texture2D" uid="uid://dhd6fu5jllmr5" path="res://WinkyEye_sample.png" id="8_508gq"]
+[ext_resource type="PackedScene" uid="uid://bbopy7xht7lsn" path="res://scenes/wink_bullet.tscn" id="8_gm80r"]
+[ext_resource type="Texture2D" uid="uid://cvhic0tefe7cj" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/HIT/WinkySprite_HitV1_01.png" id="10_2eu8r"]
+[ext_resource type="Texture2D" uid="uid://bo7probbh3j4" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/HIT/WinkySprite_HitV1_02.png" id="11_uaory"]
+[ext_resource type="Texture2D" uid="uid://cbarjw8vhy6r4" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/HIT/WinkySprite_HitV1_03.png" id="12_7w4cs"]
+[ext_resource type="Texture2D" uid="uid://bpv7oisfp6lxd" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/HIT/WinkySprite_HitV1_04.png" id="13_xl2lq"]
+[ext_resource type="Texture2D" uid="uid://daqci34f31uu7" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/IDLE/WinkySprite_IdleV1_01.png" id="14_147fg"]
+[ext_resource type="Texture2D" uid="uid://b2m7tcvuclr8t" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/IDLE/WinkySprite_IdleV1_02.png" id="15_a3sum"]
+[ext_resource type="Texture2D" uid="uid://buygww8tyx48b" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/IDLE/WinkySprite_IdleV1_03.png" id="16_50av4"]
+[ext_resource type="Texture2D" uid="uid://c2k28fepros6q" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/IDLE/WinkySprite_IdleV1_04.png" id="17_w5hra"]
+[ext_resource type="Texture2D" uid="uid://dk1tnk7wfhuns" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/JUMP + LAND/WinkySprite_JumpLand_04-transition.png" id="18_jdi4v"]
+[ext_resource type="Texture2D" uid="uid://bejaqcbuokyyh" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/JUMP + LAND/WinkySprite_Jump_01.png" id="19_ku6a4"]
+[ext_resource type="Texture2D" uid="uid://bnpahko11mu5" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/JUMP + LAND/WinkySprite_Jump_02.png" id="20_1dloy"]
+[ext_resource type="Texture2D" uid="uid://bmogpm584lowa" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/JUMP + LAND/WinkySprite_Jump_03.png" id="21_r5o6v"]
+[ext_resource type="Texture2D" uid="uid://bqdngmbn6v0t6" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_01.png" id="22_yhiap"]
+[ext_resource type="Texture2D" uid="uid://c0oas40jnrjmp" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_02.png" id="23_il54d"]
+[ext_resource type="Texture2D" uid="uid://cpst2h0ghnxyc" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_03.png" id="24_7m7dy"]
+[ext_resource type="Texture2D" uid="uid://dqnva1ubielid" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_04.png" id="25_qed83"]
+[ext_resource type="Texture2D" uid="uid://ba1tvmjgmtm2" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_05.png" id="26_54o72"]
+[ext_resource type="Texture2D" uid="uid://4msuawjltdxb" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_06.png" id="27_2617i"]
+[ext_resource type="Texture2D" uid="uid://bpoahvcd76lvo" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_0-6.png" id="28_rnpqj"]
+[ext_resource type="Texture2D" uid="uid://d0sl3dfrysv5a" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_01.png" id="29_oa1ac"]
+[ext_resource type="Texture2D" uid="uid://dmv1ixtmv8f8w" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_02.png" id="30_le1rp"]
+[ext_resource type="Texture2D" uid="uid://bjco61dknm1t" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_03.png" id="31_lmujr"]
+[ext_resource type="Texture2D" uid="uid://x3f4h4qdpmll" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_04.png" id="32_umr0y"]
+[ext_resource type="Texture2D" uid="uid://bgg5yt7fcctan" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_05.png" id="33_2hagd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2wbjp"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_11kuw")
+"texture": ExtResource("10_2eu8r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_yl35b")
+"texture": ExtResource("11_uaory")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_brdyp")
+"texture": ExtResource("12_7w4cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xl2lq")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_147fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_a3sum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_50av4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_w5hra")
 }],
 "loop": true,
 "name": &"Idle",
@@ -25,23 +67,70 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_jcisu")
+"texture": ExtResource("18_jdi4v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_xk32t")
+"texture": ExtResource("19_ku6a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1dloy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r5o6v")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_yhiap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_il54d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_7m7dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qed83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_54o72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2617i")
 }],
 "loop": true,
 "name": &"Run",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_rnpqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_oa1ac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_le1rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_lmujr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_umr0y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2hagd")
+}],
 "loop": true,
-"name": &"new_animation_1",
+"name": &"Slide",
 "speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2yohx"]
-radius = 67.0
+radius = 40.0
 height = 166.0
 
 [node name="Player" type="CharacterBody2D"]
@@ -49,13 +138,13 @@ position = Vector2(76, 44)
 script = ExtResource("1_n163l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-27, 100)
-scale = Vector2(0.257407, 0.257407)
+position = Vector2(-19, 86)
+scale = Vector2(0.257407, 0.255555)
 sprite_frames = SubResource("SpriteFrames_2wbjp")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-11, 144)
+position = Vector2(8, 45)
 shape = SubResource("CapsuleShape2D_2yohx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -63,3 +152,14 @@ shape = SubResource("CapsuleShape2D_2yohx")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+
+[node name="eyeball" type="CharacterBody2D" parent="."]
+position = Vector2(6, 7)
+script = ExtResource("7_2v5va")
+Bullet = ExtResource("8_gm80r")
+
+[node name="pupil" type="Sprite2D" parent="eyeball"]
+position = Vector2(2.2981, 1.00453e-07)
+rotation = 1.5708
+scale = Vector2(0.25, 0.240779)
+texture = ExtResource("8_508gq")
