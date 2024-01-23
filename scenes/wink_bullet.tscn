@@ -19,3 +19,7 @@ texture = ExtResource("1_en3jy")
 position = Vector2(3, -3)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_vrj8q")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true

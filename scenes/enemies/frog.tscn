@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://4tdxl60wkydr"]
+
+[ext_resource type="Script" path="res://scenes/enemies/frog.gd" id="1_xqu2o"]
+[ext_resource type="PackedScene" uid="uid://bksh30xbflfys" path="res://scenes/enemies/frog_bullet.tscn" id="2_1fmfe"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8j37k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akpgs"]
+size = Vector2(233, 150)
+
+[node name="Frog" type="CharacterBody2D"]
+position = Vector2(210, 438)
+script = ExtResource("1_xqu2o")
+Bullet = ExtResource("2_1fmfe")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-31.5, 34.5)
+scale = Vector2(231, 151)
+texture = SubResource("CanvasTexture_8j37k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-30.5, 32)
+shape = SubResource("RectangleShape2D_akpgs")

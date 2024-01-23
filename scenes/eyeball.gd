@@ -11,5 +11,3 @@ func shoot():
 	var b = Bullet.instantiate()
 	add_child(b)
 	b.position = Vector2(140, 0)
-	
-	print(b.position)

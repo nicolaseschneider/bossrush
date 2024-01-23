@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+class_name Player
 
 const SPEED = 950.0
 const JUMP_SPEED = -2450.0
@@ -13,10 +14,13 @@ const GRAVITY = 200
 
 var REMAINING_BOOSTS = 1
 var CURRENT_JUMPS = 1
+var hp
+
 
 @onready var anim = get_node("AnimatedSprite2D")
 func _ready():
 	anim.play("Idle")
+	hp = 5
 	
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 func _physics_process(delta):
@@ -74,3 +78,6 @@ func beyond_top_speed() -> bool:
 	
 func player_movement():
 	move_and_slide()
+func apply_damage():
+	hp -= 1
+	print("Player took damage! current hp: ", hp)
