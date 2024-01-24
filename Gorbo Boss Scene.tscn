@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://duqggi47ugmqh"]
+
+[ext_resource type="Script" path="res://scenes/main/MainScene.gd" id="1_6p2tp"]
+[ext_resource type="Texture2D" uid="uid://c7q553347nlph" path="res://Backgrounds/Gorbo Boss Room.png" id="2_mucem"]
+[ext_resource type="PackedScene" uid="uid://dpt0dfqnlam8k" path="res://scenes/player.tscn" id="3_87muv"]
+[ext_resource type="PackedScene" uid="uid://dckridangs3gj" path="res://scenes/platform.tscn" id="4_eafbx"]
+[ext_resource type="PackedScene" uid="uid://4tdxl60wkydr" path="res://scenes/enemies/frog.tscn" id="5_mud2j"]
+
+[node name="Gorbo Boss Scene" type="Node2D"]
+script = ExtResource("1_6p2tp")
+
+[node name="GorboBossRoom" type="Sprite2D" parent="."]
+position = Vector2(696, 170)
+scale = Vector2(1.48843, 1.48843)
+texture = ExtResource("2_mucem")
+
+[node name="Player" parent="." instance=ExtResource("3_87muv")]
+position = Vector2(583, 430)
+
+[node name="Platform" parent="." instance=ExtResource("4_eafbx")]
+position = Vector2(364, 604)
+
+[node name="Platform2" parent="." instance=ExtResource("4_eafbx")]
+position = Vector2(1108, 604)
+
+[node name="Platform3" parent="." instance=ExtResource("4_eafbx")]
+position = Vector2(1424, 150)
+rotation = 1.5708
+
+[node name="Platform4" parent="." instance=ExtResource("4_eafbx")]
+position = Vector2(0, 147)
+rotation = 1.5708
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Background" type="Node2D" parent="Node"]
+position = Vector2(-657, -16)
+
+[node name="Frog" parent="." instance=ExtResource("5_mud2j")]

@@ -1,12 +1,236 @@
-[gd_scene load_steps=5 format=3 uid="uid://4tdxl60wkydr"]
+[gd_scene load_steps=50 format=3 uid="uid://4tdxl60wkydr"]
 
 [ext_resource type="Script" path="res://scenes/enemies/frog.gd" id="1_xqu2o"]
 [ext_resource type="PackedScene" uid="uid://bksh30xbflfys" path="res://scenes/enemies/frog_bullet.tscn" id="2_1fmfe"]
+[ext_resource type="Texture2D" uid="uid://cpeyqqt833bfd" path="res://Gorbo Sprites/LEAP DIAGONAL/Gorbo_Land_03-diagonalLAND.png" id="4_e84hi"]
+[ext_resource type="Texture2D" uid="uid://bp20lquiws5nq" path="res://Gorbo Sprites/CROUCH/Gorbo_02-crouch-land.png" id="4_tmm2s"]
+[ext_resource type="Texture2D" uid="uid://bgribmyduc60k" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_01.png" id="5_k0uui"]
+[ext_resource type="Texture2D" uid="uid://5irjsgphqcl1" path="res://Gorbo Sprites/LEAP DIAGONAL/Gorbo_Leap_01-diagonal.png" id="5_pnttw"]
+[ext_resource type="Texture2D" uid="uid://b8g7nkx2dqkmd" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_02.png" id="6_3x16n"]
+[ext_resource type="Texture2D" uid="uid://bdlekiyello5c" path="res://Gorbo Sprites/LEAP DIAGONAL/Gorbo_Leap_02-diagonal.png" id="6_oavu3"]
+[ext_resource type="Texture2D" uid="uid://b3a1hfhcnrbd2" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_03.png" id="7_2g5dg"]
+[ext_resource type="Texture2D" uid="uid://55chh76tgaws" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_01-land.png" id="7_elp06"]
+[ext_resource type="Texture2D" uid="uid://b3pe7hnfl7ewi" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_04.png" id="8_8du8c"]
+[ext_resource type="Texture2D" uid="uid://bccimbrt4y0lg" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_02-chewloop.png" id="8_udi80"]
+[ext_resource type="Texture2D" uid="uid://dsv7gy6apo3e7" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_03-chewloop.png" id="9_pcxpw"]
+[ext_resource type="Texture2D" uid="uid://q8nul1x6k7aj" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_04-chewloop.png" id="10_c1fu3"]
+[ext_resource type="Texture2D" uid="uid://es8umlwk35xf" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_05-tra.png" id="11_xgx1c"]
+[ext_resource type="Texture2D" uid="uid://rakr6hoveven" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_06-tra.png" id="12_62m2o"]
+[ext_resource type="Texture2D" uid="uid://osv6oi44owqj" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_07-tra.png" id="13_j332t"]
+[ext_resource type="Texture2D" uid="uid://palx56jmglww" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_08-tra.png" id="14_xs6jg"]
+[ext_resource type="Texture2D" uid="uid://defvac3jriy70" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_09-ShootLoop.png" id="15_6dh1a"]
+[ext_resource type="Texture2D" uid="uid://dqy7q2hyn7jb2" path="res://Gorbo Sprites/TRISHOOT/Gorbo_TriShoot_10-ShootLoop.png" id="16_nfy38"]
+[ext_resource type="Texture2D" uid="uid://df6irsc3pqqev" path="res://Gorbo Sprites/SHOOT/Gorbo_AimShoot_01-tra.png" id="17_a1y54"]
+[ext_resource type="Texture2D" uid="uid://b63ta8t24qcbl" path="res://Gorbo Sprites/SHOOT/Gorbo_AimShoot_02-hold.png" id="18_h4luh"]
+[ext_resource type="Texture2D" uid="uid://ekiwl4mlxqtm" path="res://Gorbo Sprites/SHOOT/Gorbo_AimShoot_03-hold.png" id="19_uyorc"]
+[ext_resource type="Texture2D" uid="uid://dvxq035n08k8a" path="res://Gorbo Sprites/SHOOT/Gorbo_AimShoot_04-hold.png" id="20_0eqcb"]
+[ext_resource type="Texture2D" uid="uid://c1bv78qpxcd5i" path="res://Gorbo Sprites/LEAP VERTICAL/Gorbo_Leap_01-vertical.png" id="25_e30ou"]
+[ext_resource type="Texture2D" uid="uid://tta4dcowk47l" path="res://Gorbo Sprites/LEAP VERTICAL/Gorbo_Leap_03-vertical.png" id="26_j13be"]
+[ext_resource type="Texture2D" uid="uid://ff1voiy6sqjt" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_01-crouch.png" id="27_8o2j7"]
+[ext_resource type="Texture2D" uid="uid://3mswhv0gf2cv" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_02-crouch.png" id="28_n46f8"]
+[ext_resource type="Texture2D" uid="uid://6hjtbjsngt8a" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_03-crouch.png" id="29_62fsb"]
+[ext_resource type="Texture2D" uid="uid://bt45hgquokbbd" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_04-shoot.png" id="30_f3w6t"]
+[ext_resource type="Texture2D" uid="uid://golkvi4530sm" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_05-shoot.png" id="31_uhe27"]
+[ext_resource type="Texture2D" uid="uid://bcgxu6mv84m5u" path="res://Gorbo Sprites/SHOOT/Gorbo_SideShoot_06-shoot.png" id="32_l4t5i"]
+[ext_resource type="Texture2D" uid="uid://c3djpmddu78y1" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_0_static.png" id="33_itoc0"]
+[ext_resource type="Texture2D" uid="uid://c18t0vblkqxpn" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_1_tra.png" id="34_oyoiv"]
+[ext_resource type="Texture2D" uid="uid://c8qpiuhqrn1a5" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_2_yawn.png" id="35_21nbg"]
+[ext_resource type="Texture2D" uid="uid://epandt85qvi0" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_3_yawn.png" id="36_iqrth"]
+[ext_resource type="Texture2D" uid="uid://bha58bog11p5o" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_4_yawn.png" id="37_vl5pq"]
+[ext_resource type="Texture2D" uid="uid://dwiarp68bk3ea" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_5_tra.png" id="38_32ant"]
+[ext_resource type="Texture2D" uid="uid://ctywdbr6jpb8v" path="res://Gorbo Sprites/SLEEP/Gorbo_Sleep_6_tra.png" id="39_b0bru"]
+[ext_resource type="Texture2D" uid="uid://dgg3ytlsm1ygk" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_01.png" id="40_von36"]
+[ext_resource type="Texture2D" uid="uid://dv0spaf6cb3xt" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_02.png" id="41_hrh5x"]
+[ext_resource type="Texture2D" uid="uid://cse3f3h1tbr8r" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_03.png" id="42_n5a3q"]
+[ext_resource type="Texture2D" uid="uid://dkrt7fvu4bfu6" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_04.png" id="43_gola8"]
+[ext_resource type="Texture2D" uid="uid://drqq5wfnbxmxj" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_05.png" id="44_u2imn"]
+[ext_resource type="Texture2D" uid="uid://dcqdpe0kw6bha" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_06.png" id="45_4n2ws"]
+[ext_resource type="Texture2D" uid="uid://cyxxcc3022aew" path="res://Gorbo Sprites/WAKE/Gorbo_Wake_07.png" id="46_6ccch"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_8j37k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_akpgs"]
 size = Vector2(233, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gn1ps"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tmm2s")
+}],
+"loop": true,
+"name": &"Crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_e84hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pnttw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oavu3")
+}],
+"loop": true,
+"name": &"Leap Diag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_elp06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_udi80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pcxpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_c1fu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xgx1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_62m2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j332t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xs6jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6dh1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nfy38")
+}],
+"loop": true,
+"name": &"Trishot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_a1y54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_h4luh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_uyorc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_0eqcb")
+}],
+"loop": true,
+"name": &"aim",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_k0uui")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3x16n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_2g5dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8du8c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_e30ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_j13be")
+}],
+"loop": true,
+"name": &"leap verical",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_8o2j7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_n46f8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_62fsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_f3w6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_uhe27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_l4t5i")
+}],
+"loop": true,
+"name": &"sideshoot",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_itoc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_oyoiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_21nbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_iqrth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_vl5pq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_32ant")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_b0bru")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_von36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_hrh5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_n5a3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gola8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_u2imn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_4n2ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_6ccch")
+}],
+"loop": true,
+"name": &"wake",
+"speed": 5.0
+}]
 
 [node name="Frog" type="CharacterBody2D"]
 position = Vector2(210, 438)
@@ -14,6 +238,7 @@ script = ExtResource("1_xqu2o")
 Bullet = ExtResource("2_1fmfe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-31.5, 34.5)
 scale = Vector2(231, 151)
 texture = SubResource("CanvasTexture_8j37k")
@@ -21,3 +246,9 @@ texture = SubResource("CanvasTexture_8j37k")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-30.5, 32)
 shape = SubResource("RectangleShape2D_akpgs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-36, 35)
+scale = Vector2(0.486885, 0.486885)
+sprite_frames = SubResource("SpriteFrames_gn1ps")
+animation = &"wake"

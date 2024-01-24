@@ -32,7 +32,6 @@ scale = Vector2(890.524, 22.5232)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 position = Vector2(0.725415, 30.0801)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7iu82")
 
 [node name="Platform West" type="StaticBody2D" parent="."]
@@ -43,7 +42,6 @@ scale = Vector2(890.524, 22.5232)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform West"]
 show_behind_parent = true
 position = Vector2(-0.050532, 10.7001)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8bnc8")
 
 [node name="Platform East" type="StaticBody2D" parent="."]

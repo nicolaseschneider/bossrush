@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dpt0dfqnlam8k"]
+[gd_scene load_steps=33 format=3 uid="uid://dpt0dfqnlam8k"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_n163l"]
 [ext_resource type="Script" path="res://scenes/eyeball.gd" id="7_2v5va"]
@@ -22,12 +22,16 @@
 [ext_resource type="Texture2D" uid="uid://dqnva1ubielid" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_04.png" id="25_qed83"]
 [ext_resource type="Texture2D" uid="uid://ba1tvmjgmtm2" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_05.png" id="26_54o72"]
 [ext_resource type="Texture2D" uid="uid://4msuawjltdxb" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/RUN/WinkySprite_Run_06.png" id="27_2617i"]
+[ext_resource type="Texture2D" uid="uid://b2j3trud6j0ws" path="res://Winky Sprites/Winky_Horns.png" id="28_3yvgf"]
 [ext_resource type="Texture2D" uid="uid://bpoahvcd76lvo" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_0-6.png" id="28_rnpqj"]
 [ext_resource type="Texture2D" uid="uid://d0sl3dfrysv5a" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_01.png" id="29_oa1ac"]
 [ext_resource type="Texture2D" uid="uid://dmv1ixtmv8f8w" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_02.png" id="30_le1rp"]
 [ext_resource type="Texture2D" uid="uid://bjco61dknm1t" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_03.png" id="31_lmujr"]
 [ext_resource type="Texture2D" uid="uid://x3f4h4qdpmll" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_04.png" id="32_umr0y"]
 [ext_resource type="Texture2D" uid="uid://bgg5yt7fcctan" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_05.png" id="33_2hagd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvu4d"]
+size = Vector2(650.337, 475.512)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2wbjp"]
 animations = [{
@@ -137,6 +141,15 @@ height = 166.0
 position = Vector2(76, 44)
 script = ExtResource("1_n163l")
 
+[node name="WinkyHorns" type="Sprite2D" parent="."]
+position = Vector2(-21, -9)
+scale = Vector2(0.250257, 0.250257)
+texture = ExtResource("28_3yvgf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinkyHorns"]
+position = Vector2(-1.50104, 1.99797)
+shape = SubResource("RectangleShape2D_wvu4d")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-19, 86)
 scale = Vector2(0.257407, 0.255555)
@@ -163,3 +176,5 @@ position = Vector2(2.2981, 1.00453e-07)
 rotation = 1.5708
 scale = Vector2(0.25, 0.240779)
 texture = ExtResource("8_508gq")
+
+[node name="Sprite2D" type="Sprite2D" parent="eyeball"]
