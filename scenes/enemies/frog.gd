@@ -4,14 +4,15 @@ class_name Enemy
 
 @export var Bullet : PackedScene
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 250
+const JUMP_VELOCITY = -2000
 var player_position
 var health
 @onready var player = get_parent().get_node("Player")
+@onready var anim=get_node("AnimatedSprite2D")
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-const gravity = 440
+const gravity = 7000
 
 var move_dir = 1 # what direction the frog will move.
 
@@ -28,6 +29,7 @@ func _physics_process(delta):
 		velocity.x = SPEED * move_dir
 	else:
 		if state == "JUMP":
+			anim.play("jump")
 			state = "SHOOT"
 			move_dir = get_player_direction_x()
 			jump()
@@ -55,5 +57,7 @@ func shoot():
 	
 func apply_damage():
 	health -= 1
-	print("Frog took damage!")
-	print("Frog hp: ", health)
+	if health <= 0: 
+		anim.play("Death")
+		queue_free()
+		

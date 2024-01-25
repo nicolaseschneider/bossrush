@@ -30,9 +30,6 @@
 [ext_resource type="Texture2D" uid="uid://x3f4h4qdpmll" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_04.png" id="32_umr0y"]
 [ext_resource type="Texture2D" uid="uid://bgg5yt7fcctan" path="res://Winky Sprites/WINKY LEG SPRITES 1.20.24/SLIDE/WinkySprite_SLIDE_05.png" id="33_2hagd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvu4d"]
-size = Vector2(650.337, 475.512)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_2wbjp"]
 animations = [{
 "frames": [{
@@ -137,44 +134,53 @@ animations = [{
 radius = 40.0
 height = 166.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvu4d"]
+size = Vector2(650.337, 475.512)
+
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(76, 44)
 script = ExtResource("1_n163l")
-
-[node name="WinkyHorns" type="Sprite2D" parent="."]
-position = Vector2(-21, -9)
-scale = Vector2(0.250257, 0.250257)
-texture = ExtResource("28_3yvgf")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinkyHorns"]
-position = Vector2(-1.50104, 1.99797)
-shape = SubResource("RectangleShape2D_wvu4d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-19, 86)
 scale = Vector2(0.257407, 0.255555)
 sprite_frames = SubResource("SpriteFrames_2wbjp")
 animation = &"Idle"
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(8, 45)
 shape = SubResource("CapsuleShape2D_2yohx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 
-[node name="eyeball" type="CharacterBody2D" parent="."]
-position = Vector2(6, 7)
+[node name="Head" type="Node2D" parent="."]
+
+[node name="WinkyHorns" type="Sprite2D" parent="Head"]
+position = Vector2(8, 6)
+scale = Vector2(0.242458, 0.242458)
+texture = ExtResource("28_3yvgf")
+centered = false
+offset = Vector2(-450, -300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head/WinkyHorns"]
+visible = false
+position = Vector2(-1.50104, 1.99797)
+shape = SubResource("RectangleShape2D_wvu4d")
+
+[node name="eyeball" type="CharacterBody2D" parent="Head"]
+position = Vector2(6, 5)
 script = ExtResource("7_2v5va")
 Bullet = ExtResource("8_gm80r")
 
-[node name="pupil" type="Sprite2D" parent="eyeball"]
-position = Vector2(2.2981, 1.00453e-07)
+[node name="pupil" type="Sprite2D" parent="Head/eyeball"]
 rotation = 1.5708
-scale = Vector2(0.25, 0.240779)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_508gq")
-
-[node name="Sprite2D" type="Sprite2D" parent="eyeball"]
+metadata/_edit_lock_ = true

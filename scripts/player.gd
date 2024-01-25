@@ -15,9 +15,7 @@ const GRAVITY = 200
 var REMAINING_BOOSTS = 1
 var CURRENT_JUMPS = 1
 var hp
-
-
-@onready var anim = get_node("AnimatedSprite2D")
+@onready var anim=get_node("AnimatedSprite2D")
 func _ready():
 	anim.play("Idle")
 	hp = 5
@@ -27,18 +25,24 @@ func _physics_process(delta):
 	var input_dir: Vector2 = input()
 	if input_dir.x < 0:
 		$AnimatedSprite2D.flip_h = true
+		$Head/WinkyHorns.flip_h=true
+		$Head/eyeball.position.x=-51
 	elif input_dir.x > 0:
 		$AnimatedSprite2D.flip_h = false
+		$Head/WinkyHorns.flip_h=false
+		$Head/eyeball.position.x=0
+		
 	
 	
 	if input_dir != Vector2.ZERO && !beyond_top_speed():
 		add_acceleration(input_dir)
-		anim.play("Run") # play run animation here -> write the script
-		# play_animation()
+		anim.play("Run")
+		$Head.position.y=15
 		boost(input_dir)
 	else:
 		add_friction()
-		anim.play("Idle") # play_animation()
+		anim.play("Idle")
+		$Head.position.y=0
 	jump()
 	player_movement()
 	

@@ -1,9 +1,11 @@
-[gd_scene load_steps=50 format=3 uid="uid://4tdxl60wkydr"]
+[gd_scene load_steps=52 format=3 uid="uid://4tdxl60wkydr"]
 
 [ext_resource type="Script" path="res://scenes/enemies/frog.gd" id="1_xqu2o"]
 [ext_resource type="PackedScene" uid="uid://bksh30xbflfys" path="res://scenes/enemies/frog_bullet.tscn" id="2_1fmfe"]
 [ext_resource type="Texture2D" uid="uid://cpeyqqt833bfd" path="res://Gorbo Sprites/LEAP DIAGONAL/Gorbo_Land_03-diagonalLAND.png" id="4_e84hi"]
+[ext_resource type="Texture2D" uid="uid://cbv4i0pk84dra" path="res://Gorbo Sprites/DEATH/Gorbo_Death1_01.png" id="4_eqbay"]
 [ext_resource type="Texture2D" uid="uid://bp20lquiws5nq" path="res://Gorbo Sprites/CROUCH/Gorbo_02-crouch-land.png" id="4_tmm2s"]
+[ext_resource type="Texture2D" uid="uid://p6up1vgen3bu" path="res://Gorbo Sprites/DEATH/Gorbo_Death1_02-twitch.png" id="5_ajsq1"]
 [ext_resource type="Texture2D" uid="uid://bgribmyduc60k" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_01.png" id="5_k0uui"]
 [ext_resource type="Texture2D" uid="uid://5irjsgphqcl1" path="res://Gorbo Sprites/LEAP DIAGONAL/Gorbo_Leap_01-diagonal.png" id="5_pnttw"]
 [ext_resource type="Texture2D" uid="uid://b8g7nkx2dqkmd" path="res://Gorbo Sprites/IDLE/Gorbo_Idle_02.png" id="6_3x16n"]
@@ -60,6 +62,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"Crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_eqbay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ajsq1")
+}],
+"loop": true,
+"name": &"Death",
 "speed": 5.0
 }, {
 "frames": [{
@@ -251,4 +264,8 @@ shape = SubResource("RectangleShape2D_akpgs")
 position = Vector2(-36, 35)
 scale = Vector2(0.486885, 0.486885)
 sprite_frames = SubResource("SpriteFrames_gn1ps")
-animation = &"wake"
+animation = &"sleep"
+frame_progress = 0.410846
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+callback_mode_process = 0
