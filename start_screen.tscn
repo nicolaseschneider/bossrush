@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dun7w3kskx7yh"]
+[gd_scene load_steps=5 format=3 uid="uid://dun7w3kskx7yh"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_k7heu"]
 [ext_resource type="Texture2D" uid="uid://bjm8gdwh3rc1n" path="res://Backgrounds/Bgs_Stars_v01.png" id="2_poujn"]
 [ext_resource type="Script" path="res://Play.gd" id="3_n32bm"]
+[ext_resource type="Texture2D" uid="uid://dq3734csq6xor" path="res://Backgrounds/TitleScreen_titleBg_03.png" id="4_6h83i"]
 
 [node name="START SCREEN" type="Node2D"]
 script = ExtResource("1_k7heu")
@@ -15,10 +16,10 @@ texture = ExtResource("2_poujn")
 [node name="Play" type="Button" parent="."]
 editor_description = "Play Button initiate Main Scene"
 top_level = true
-offset_left = 355.0
-offset_top = 380.0
-offset_right = 784.0
-offset_bottom = 472.0
+offset_left = 401.0
+offset_top = 458.0
+offset_right = 769.0
+offset_bottom = 537.0
 text = "PLAY"
 script = ExtResource("3_n32bm")
 
@@ -33,14 +34,19 @@ metadata/_edit_lock_ = true
 [node name="Quit" type="Button" parent="."]
 editor_description = "Quit Button to close application"
 top_level = true
-offset_left = 353.0
-offset_top = 501.0
-offset_right = 783.0
-offset_bottom = 589.0
+offset_left = 401.0
+offset_top = 553.0
+offset_right = 767.0
+offset_bottom = 628.0
 text = "QUIT
 "
 
 [node name="Hardware Cursor" type="Node" parent="."]
+
+[node name="TitleScreenTitleBg03" type="Sprite2D" parent="."]
+position = Vector2(569, 227)
+scale = Vector2(0.52617, 0.52617)
+texture = ExtResource("4_6h83i")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
